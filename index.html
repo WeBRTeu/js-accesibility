@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentație AccessibilityWidget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header img {
+            height: 45px;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 120px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .demo-note {
+            padding: 15px;
+            background: #e5f3ff;
+            border-left: 4px solid #1d6fa5;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://webrt.eu/img/wrt.png" alt="Logo">
+    <h2>AccessibilityWidget — Documentație + Demo</h2>
+</header>
+
+<main>
+
+    <section class="section">
+        <h1>Despre AccessibilityWidget</h1>
+        <p>
+            Această pagină prezintă componenta <strong>AccessibilityWidget</strong>, un instrument complet pentru
+            accesibilitate web care poate fi adăugat pe orice site. Conține funcții precum mărirea textului,
+            modificarea contrastului, citirea conținutului cu sintetizator vocal, evidențiere link-uri,
+            afișare imagini fără ALT, controlul saturației, cursor mare și multe altele.
+        </p>
+
+        <p>
+            Mai jos poți vedea un demo complet funcțional — butonul de accesibilitate apare în partea
+            dreapta-jos. Poți încerca toate opțiunile în timp real.
+        </p>
+
+        <div class="demo-note">
+            <strong>DEMO LIVE:</strong> Folosește butonul albastru din colțul din dreapta-jos pentru a deschide panoul
+            de accesibilitate și a testa funcțiile.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Includerea scriptului</h2>
+        <p>
+            Pentru a utiliza widget-ul, adaugă următoarea linie în partea de jos a paginii tale:
+        </p>
+
+        <pre>
+&lt;script src="accessibility.js"&gt;&lt;/script&gt;
+        </pre>
+
+        <p>
+            Tot codul JavaScript este încărcat automat la <code>DOMContentLoaded</code>, astfel încât nu trebuie să
+            configurezi nimic în plus.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Codul complet al clasei AccessibilityWidget</h2>
+        <p>Mai jos este afișat automat codul preluat din fișierul JS extern.</p>
+
+        <pre id="codeBlock">Se încarcă codul...</pre>
+    </section>
+
+</main>
+
+<!-- ====================================================== -->
+<!-- AICI se încarcă scriptul tău real. Schimbă URL-ul!    -->
+<!-- ====================================================== -->
+<script src="accessibility.js"></script>
+
+<script>
+    // Afișează codul JS în <pre>
+    fetch("accessibility.js")
+        .then(r => r.text())
+        .then(code => {
+            document.getElementById("codeBlock").textContent = code;
+        })
+        .catch(() => {
+            document.getElementById("codeBlock").textContent = "Eroare la încărcarea fișierului JS.";
+        });
+</script>
+
+</body>
+</html>
+
